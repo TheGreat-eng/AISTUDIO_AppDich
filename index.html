@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <title>Trình Đơn Giản Hóa Đoạn Văn</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/genai": "https://esm.sh/@google/genai@^0.8.0",
+          "marked": "https://esm.sh/marked@^15.0.8"
+        }
+      }
+    </script>
+    <script type="module" src="index.tsx"></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Trình Đơn Giản Hóa Đoạn Văn</h1>
+        <p>Làm cho văn bản phức tạp trở nên dễ hiểu.</p>
+      </header>
+      <form id="simplifier-form">
+        <div class="input-wrapper">
+          <label for="paragraph-input">Dán văn bản phức tạp của bạn vào đây</label>
+          <textarea
+            id="paragraph-input"
+            name="paragraph"
+            rows="8"
+            required
+            placeholder="Ví dụ: Các phân nhánh nhận thức luận của cơ học lượng tử thách thức các quan niệm cổ điển về thực tại khách quan..."
+          ></textarea>
+        </div>
+        <button type="submit" id="generate-btn">
+          <span class="btn-text">Đơn Giản Hóa</span>
+        </button>
+      </form>
+      <section id="result-container" aria-live="polite"></section>
+    </main>
+  </body>
+</html>
